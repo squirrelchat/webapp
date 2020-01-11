@@ -1,0 +1,19 @@
+# JetBrains stuff
+.idea
+*.iml
+
+# NodeJS memes
+node_modules
+npm-debug.log
+
+# Built assets
+dist
+
+# Stuff
+*.nogit.*
+*.nogit/
+
+# Eclipse bs
+/.settings/
+.project
+.classpath
