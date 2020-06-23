@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "module": "esnext",
+    "target": "es6",
+    "jsx": "react"
+  }
+}

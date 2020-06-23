@@ -8,6 +8,7 @@ npm-debug.log
 
 # Built assets
 dist
+/index.html
 
 # Stuff
 *.nogit.*
