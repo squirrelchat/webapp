@@ -25,19 +25,38 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-import '@styles/main.scss'
+:global(.no-js) {
+  padding: 5% 10%;
 
-// test yes
-if (SquirrelEnv.BuildFlags.ENABLE_EXPERIMENTS) {
-  console.log('experiments')
+  img {
+    width: 156px;
+    height: 156px;
+  }
+
+  h1 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 32px;
+  }
+
+  p {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  div {
+    margin-top: 16px;
+    display: flex;
+  }
+
+  a {
+    background-color: #252525;
+    border-radius: 3px;
+    color: inherit;
+    padding: 10px 15px;
+
+    + a {
+      margin-left: 16px;
+    }
+  }
 }
-
-if (SquirrelEnv.BuildFlags.ENABLE_PAYMENT_GATEWAYS) {
-  console.log('payments')
-}
-
-if (SquirrelEnv.BuildFlags.ENABLE_ANALYTICS) {
-  console.log('analytics')
-}
-
-console.log('memes')

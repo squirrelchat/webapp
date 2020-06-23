@@ -28,17 +28,32 @@
 <html lang='en'>
 <head>
   <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" name="viewport" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Squirrel Chat" />
-  <meta property="og:title" content="Squirrel Chat" />
+  <meta name='theme-color' content='#ff7b1c'>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" name="viewport"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Squirrel Chat"/>
+  <meta property="og:title" content="Squirrel Chat"/>
   <meta property="og:description" content="Next-gen, open-source and enterprise-ready chat platform"/>
-  <meta property="og:image" content="${require('@assets/squirrel.png').default}">
-  <link rel="shortcut icon" href="${require('@assets/squirrel.ico').default}">
+  <meta property="og:image" content="<%= require('@assets/squirrel.png').default %>">
+  <link rel="shortcut icon" href="<%= require('@assets/squirrel.ico').default %>">
   <link href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap' rel='stylesheet'/>
 </head>
 <body>
-  <noscript>You need to enable JavaScript to run this app :(</noscript>
-  <div id='react-root'></div>
+  <noscript>
+    <div class="no-js">
+      <img src="<%= require('@assets/squirrel.png').default %>" alt="Squirrel Logo"/>
+      <h1>JavaScript is required</h1>
+      <p>In order to use the Squirrel Web application, you have to enable JavaScript in your web browser.</p>
+      <p>
+        If you are worried, Squirrel itself is open-source (BSD-3-Clause) and will not load, or involve in any way
+        closed JavaScript code without letting you know what it'll attempt to load, and why.
+      </p>
+      <div>
+        <a href="https://squirrel.chat" target="_blank" rel="noreferrer">Website</a>
+        <a href="https://github.com/squirrelchat/webapp" target="_blank" rel="noreferrer">Source Code</a>
+      </div>
+    </div>
+  </noscript>
+  <div id="react-root"></div>
 </body>
 </html>

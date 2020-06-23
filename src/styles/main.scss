@@ -25,19 +25,30 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-import '@styles/main.scss'
+@import 'include/normalize';
+@import 'include/nojs';
 
-// test yes
-if (SquirrelEnv.BuildFlags.ENABLE_EXPERIMENTS) {
-  console.log('experiments')
+* { box-sizing: border-box; }
+
+html, body, :global(#react-root) {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  color: #e5e5e5;
+  background-color: #303030;
+  font-family: 'Open Sans', sans-serif;
 }
 
-if (SquirrelEnv.BuildFlags.ENABLE_PAYMENT_GATEWAYS) {
-  console.log('payments')
+:global(#react-root:empty) {
+  display: none;
 }
 
-if (SquirrelEnv.BuildFlags.ENABLE_ANALYTICS) {
-  console.log('analytics')
-}
+a {
+  color: #138dff;
+  text-decoration: none;
 
-console.log('memes')
+  &:hover {
+    text-decoration: underline;
+  }
+}
