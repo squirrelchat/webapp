@@ -1,5 +1,5 @@
 # Squirrel Webapp
-[![License](https://img.shields.io/github/license/squirrelchat/webapp.svg?style=flat-square)](https://github.com/squirrelchat/webapp/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/squirrelchat/webapp.svg?style=flat-square)](https://github.com/squirrelchat/webapp/blob/mistress/LICENSE)
 [![Discord](https://img.shields.io/badge/chat-on%20Discord-7289DA.svg?style=flat-square)](https://squirrel.chat/discord)
 
 ## Building
