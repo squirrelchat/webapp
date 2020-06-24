@@ -2,7 +2,7 @@ dependencies:
   comlink: 4.3.0
   react: 16.13.1
   react-helmet: 6.1.0_react@16.13.1
-  react-redux: 7.2.0_react@16.13.1+redux@4.0.5
+  react-redux: 7.2.0_49f644e2f7de4182503f8b93abece808
   react-router: 5.2.0_react@16.13.1
   redux: 4.0.5
 devDependencies:
@@ -21,6 +21,7 @@ devDependencies:
   node-sass: 4.14.1
   optimize-css-assets-webpack-plugin: 5.0.3_webpack@4.43.0
   postcss-loader: 3.0.0
+  react-dom: 16.13.1_react@16.13.1
   react-refresh: 0.8.3
   sass-loader: 8.0.2_node-sass@4.14.1+webpack@4.43.0
   source-map-loader: 1.0.0_webpack@4.43.0
@@ -4177,7 +4178,6 @@ packages:
     resolution:
       integrity: sha512-G5x2saUTupU9D/xBY9snJs3TxvwX8EkpLFiYlPpDt/VmMHOXprnSU1nxiTmFbijCX4BLF/cMRIfAcC5BiMYgFQ==
   /js-tokens/4.0.0:
-    dev: false
     resolution:
       integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
   /js-yaml/3.14.0:
@@ -4412,7 +4412,6 @@ packages:
   /loose-envify/1.4.0:
     dependencies:
       js-tokens: 4.0.0
-    dev: false
     hasBin: true
     resolution:
       integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
@@ -6101,7 +6100,6 @@ packages:
       loose-envify: 1.4.0
       object-assign: 4.1.1
       react-is: 16.13.1
-    dev: false
     resolution:
       integrity: sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
   /proto-list/1.2.4:
@@ -6262,6 +6260,17 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha512-4Oz8DUIwdvoa5qMJelxipzi/iJIi40O5cGV1wNYp5hvZP8ZN0T+jiNkL0QepXs+EsQ9XJ8ipEDoiH70ySUJP3Q==
+  /react-dom/16.13.1_react@16.13.1:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      prop-types: 15.7.2
+      react: 16.13.1
+      scheduler: 0.19.1
+    peerDependencies:
+      react: ^16.13.1
+    resolution:
+      integrity: sha512-81PIMmVLnCNLO/fFOQxdQkvEq/+Hfpv24XNJfpyZhTRfO0QcmQIF/PgCa1zCOj2w1hrn12MFLyaJ/G0+Mxtfag==
   /react-fast-compare/3.2.0:
     dev: false
     resolution:
@@ -6279,16 +6288,16 @@ packages:
     resolution:
       integrity: sha512-4uMzEY9nlDlgxr61NL3XbKRy1hEkXmKNXhjbAIOVw5vcFrsdYbH2FEwcNyWvWinl103nXgzYNlns9ca+8kFiWw==
   /react-is/16.13.1:
-    dev: false
     resolution:
       integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
-  /react-redux/7.2.0_react@16.13.1+redux@4.0.5:
+  /react-redux/7.2.0_49f644e2f7de4182503f8b93abece808:
     dependencies:
       '@babel/runtime': 7.10.3
       hoist-non-react-statics: 3.3.2
       loose-envify: 1.4.0
       prop-types: 15.7.2
       react: 16.13.1
+      react-dom: 16.13.1_react@16.13.1
       react-is: 16.13.1
       redux: 4.0.5
     dev: false
@@ -6341,7 +6350,6 @@ packages:
       loose-envify: 1.4.0
       object-assign: 4.1.1
       prop-types: 15.7.2
-    dev: false
     engines:
       node: '>=0.10.0'
     resolution:
@@ -6693,6 +6701,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
+  /scheduler/0.19.1:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+    resolution:
+      integrity: sha512-n/zwRWRYSUj0/3g/otKDRPMh6qv2SYMWNq85IEa8iZyAv8od9zDYpGSnpBEjNgcMNq6Scbu5KfIPxNF72R/2EA==
   /schema-utils/1.0.0:
     dependencies:
       ajv: 6.12.2
@@ -8252,6 +8266,7 @@ specifiers:
   optimize-css-assets-webpack-plugin: ^5.0.3
   postcss-loader: ^3.0.0
   react: ^16.13.1
+  react-dom: ^16.13.1
   react-helmet: ^6.1.0
   react-redux: ^7.2.0
   react-refresh: ^0.8.3

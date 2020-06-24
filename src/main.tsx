@@ -25,19 +25,17 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+import React from 'react'
+import { render } from 'react-dom'
+
 import '@styles/main.scss'
 
-// test yes
-if (SquirrelEnv.BuildFlags.ENABLE_EXPERIMENTS) {
-  console.log('experiments')
-}
+const Root = React.lazy(() => import('@components/Root'))
 
-if (SquirrelEnv.BuildFlags.ENABLE_PAYMENT_GATEWAYS) {
-  console.log('payments')
-}
-
-if (SquirrelEnv.BuildFlags.ENABLE_ANALYTICS) {
-  console.log('analytics')
-}
-
-console.log('memes')
+// todo: proper loading indicator
+render(
+  <React.Suspense fallback={'loading yes'}>
+    <Root/>
+  </React.Suspense>,
+  document.querySelector('#react-root')
+)

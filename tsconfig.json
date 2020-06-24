@@ -3,8 +3,17 @@
     "sourceMap": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
+    "allowSyntheticDefaultImports": true,
     "module": "esnext",
     "target": "es6",
-    "jsx": "react"
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": [ "src/components/*" ],
+      "@typings/*": [ "src/typings/*" ],
+      "@store/*": [ "src/store/*" ],
+      "@styles/*": [ "src/styles/*" ],
+      "@assets/*": [ "src/assets/*" ]
+    }
   }
 }

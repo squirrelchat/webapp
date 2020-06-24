@@ -25,30 +25,18 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-@import 'include/normalize';
-@import 'include/nojs';
+import React from 'react'
 
-* { box-sizing: border-box; }
-
-html, body, :global(#react-root) {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  color: #e5e5e5;
-  background-color: #303030;
-  font-family: 'Open Sans', sans-serif;
+export interface AuthScreenLayoutProps {
+  children: React.ReactChild
 }
 
-:global(#react-root:empty) {
-  display: none;
+// todo: make something that looks decent in Figma
+const Layout = (props: AuthScreenLayoutProps) => {
+  return (
+    <div></div>
+  )
 }
 
-a {
-  color: #138dff;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
+Layout.displayName = 'AuthScreenLayout'
+export default React.memo(Layout)

@@ -25,30 +25,13 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-@import 'include/normalize';
-@import 'include/nojs';
+import React from 'react'
 
-* { box-sizing: border-box; }
+import Layout from './AuthScreens/Layout'
 
-html, body, :global(#react-root) {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  color: #e5e5e5;
-  background-color: #303030;
-  font-family: 'Open Sans', sans-serif;
-}
-
-:global(#react-root:empty) {
-  display: none;
-}
-
-a {
-  color: #138dff;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
+// test stufffffff
+export default React.memo(
+  () => <Layout>
+    test
+  </Layout>
+)
