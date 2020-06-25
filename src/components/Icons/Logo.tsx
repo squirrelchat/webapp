@@ -25,23 +25,26 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-interface SquirrelEnv {
-  BuildFlags: {
-    ENABLE_EXPERIMENTS: boolean
-    ENABLE_PAYMENT_GATEWAYS: boolean
-    ENABLE_ANALYTICS: boolean
-  },
-  GIT_REVISION: string
-}
+import React from 'react'
 
-declare const SquirrelEnv: SquirrelEnv
+import svg from '@assets/logo.svg'
+import prideSvg from '@assets/squirrel-pride.svg'
 
-declare module "*.scss" {
-  const classes: { [key: string]: string }
-  export default classes
-}
+const Pride = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox='0 0 386.90 100' {...props}>
+    <image x='0' y='0' width='97.46' height='100' href={`${prideSvg}`}/>
+    <use x='130.46' y='23' width='256.44' height='70' href={`${svg}#wordmark`}/>
+  </svg>
+)
 
-declare module "@assets/*" {
-  const asset: string
-  export default asset
-}
+const Logo = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg {...props}>
+    <use href={`${svg}#logo`}/>
+  </svg>
+)
+
+Logo.displayName = 'Logo'
+Pride.displayName = 'PrideLogo'
+
+export default React.memo(Logo)
+export const PrideLogo = React.memo(Pride)

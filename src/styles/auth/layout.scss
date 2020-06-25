@@ -25,14 +25,117 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+.layout {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  position: relative;
+  background-color: rgba(0, 0, 0, .6);
+  z-index: 1;
+}
+
+.logo {
+  color: #ff7b1c;
+  margin-top: 16px;
+  margin-left: -32px;
+  height: 48px;
+}
+
+.bg {
+  display: none;
+}
+
+.background {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity .2s;
+    filter: blur(4px);
+    pointer-events: none;
+  }
+}
+
 .container {
-
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, .6);
 }
 
-.entering {
+.credits {
+  position: relative;
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, .6);
+  text-align: right;
+  z-index: 1;
 
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
 }
 
-.leaving {
+@media screen and (min-width: 850px) {
+  .layout {
+    justify-content: center;
+  }
 
+  .header {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .logo {
+    position: relative;
+    z-index: 1;
+  }
+
+  .bg {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    path {
+      fill: rgba(0, 0, 0, .6);
+    }
+  }
+
+  .credits {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-top-left-radius: 16px;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    flex: initial;
+    width: 680px;
+    max-height: 80%;
+    margin-left: 10%;
+    margin-top: 0;
+    background-color: rgba(0, 0, 0, .6);
+  }
 }

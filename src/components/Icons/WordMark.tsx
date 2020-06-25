@@ -25,23 +25,15 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-interface SquirrelEnv {
-  BuildFlags: {
-    ENABLE_EXPERIMENTS: boolean
-    ENABLE_PAYMENT_GATEWAYS: boolean
-    ENABLE_ANALYTICS: boolean
-  },
-  GIT_REVISION: string
-}
+import React from 'react'
 
-declare const SquirrelEnv: SquirrelEnv
+import svg from '@assets/logo.svg'
 
-declare module "*.scss" {
-  const classes: { [key: string]: string }
-  export default classes
-}
+const WordMark = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg {...props}>
+    <use href={`${svg}#wordmark`}/>
+  </svg>
+)
 
-declare module "@assets/*" {
-  const asset: string
-  export default asset
-}
+WordMark.displayName = 'WordMark'
+export default React.memo(WordMark)

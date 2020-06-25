@@ -57,6 +57,7 @@ const baseConfig = {
   resolve: {
     extensions: [ '.js', '.ts', '.tsx' ],
     alias: {
+      '@constants': join(__dirname, 'src', 'constants.ts'),
       '@components': join(__dirname, 'src', 'components'),
       '@typings': join(__dirname, 'src', 'typings'),
       '@store': join(__dirname, 'src', 'store'),

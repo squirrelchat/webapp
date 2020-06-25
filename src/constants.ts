@@ -24,24 +24,3 @@
  * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
-interface SquirrelEnv {
-  BuildFlags: {
-    ENABLE_EXPERIMENTS: boolean
-    ENABLE_PAYMENT_GATEWAYS: boolean
-    ENABLE_ANALYTICS: boolean
-  },
-  GIT_REVISION: string
-}
-
-declare const SquirrelEnv: SquirrelEnv
-
-declare module "*.scss" {
-  const classes: { [key: string]: string }
-  export default classes
-}
-
-declare module "@assets/*" {
-  const asset: string
-  export default asset
-}

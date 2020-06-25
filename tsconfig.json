@@ -9,6 +9,7 @@
     "jsx": "react",
     "baseUrl": ".",
     "paths": {
+      "@constants": [ "src/constants.ts" ],
       "@components/*": [ "src/components/*" ],
       "@typings/*": [ "src/typings/*" ],
       "@store/*": [ "src/store/*" ],

@@ -25,23 +25,15 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-interface SquirrelEnv {
-  BuildFlags: {
-    ENABLE_EXPERIMENTS: boolean
-    ENABLE_PAYMENT_GATEWAYS: boolean
-    ENABLE_ANALYTICS: boolean
-  },
-  GIT_REVISION: string
-}
+import React from 'react'
 
-declare const SquirrelEnv: SquirrelEnv
+import svg from '@assets/logo.svg'
 
-declare module "*.scss" {
-  const classes: { [key: string]: string }
-  export default classes
-}
+const Squirrel = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg {...props}>
+    <use href={`${svg}#squirrel`}/>
+  </svg>
+)
 
-declare module "@assets/*" {
-  const asset: string
-  export default asset
-}
+Squirrel.displayName = 'Squirrel'
+export default React.memo(Squirrel)
